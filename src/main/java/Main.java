@@ -19,12 +19,12 @@ public class Main {
         printDeals(dealsList);
         List<Boolean> checkResult = check(dealsList, price);
         System.out.println("Correct:");
-        printList(checkResult, true);
+        printResultList(checkResult, true);
         System.out.println("Incorrect:");
-        printList(checkResult, false);
+        printResultList(checkResult, false);
     }
 
-    private static void printList(List<Boolean> checkResult, boolean type) {
+    private static void printResultList(List<Boolean> checkResult, boolean type) {
         IntStream.range(0,checkResult.size()).forEach((i) -> {
                 if(checkResult.get(i) == type) {
                     System.out.print((i+1) + " ");
